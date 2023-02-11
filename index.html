@@ -1,0 +1,95 @@
+<?doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Accessibility Course Overview</title>
+  <link rel="stylesheet" href="project2.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="project2.js"></script>
+</head>
+
+<body>
+
+<div role="heading" id="heading" aria-level="1">
+  <nav role ="navigation" >
+    <a href="#home"><img src="pics/home.png"></a>
+    <a href="#links"><img src="pics/links.png"></a> 
+    <a href="#signup"><img src="pics/signup.png"></a
+  </nav>
+</div>
+
+<div role="main" id="main" aria-level="2">
+  <h1 style="visibility: hidden" >Main Content></h1>
+
+<!-- <div id="accessibilitybanner"></div> -->
+
+  <div id="home" role="home page">
+    <h2>Accessibility Overview</h2>
+
+    <div role="img" aria-label="Description of the employment chart for disabled and non disabled Americans">
+      <img  src="employment-graph.jpg" 
+      alt="Employment for disabled Americans drops from 50.2% in 1991 to 41.1% in 2010, 
+      compared to 84.4% for non-disabled Americans in 1991 and 79.1% in 2010, respetively.">
+      <article role="employment_chart_explanation">
+        The chart compares the employment for disabled and non-disabled Americans in 1991 and 2010, respectively. <br>
+        The bar on the left each year represents the employment rate for disabled Americans.<br>
+        The bar on the right represents that for the non-disabled.<br>
+        It is worth noticing that the bar on the right is always higher than the bar on the left.<br>
+        The employment rate for disabled Americans is 50.2% in 1991, and 41.1% in 2010.<br>
+        The employment rate for non-disabled Americans is 84.4% in 1991, and 79.1% in 2010.<br>
+      </article> 
+    </div>
+  </div>
+</div>
+
+<footer id="links" role="contentinfo" aria-label="links to external resources" aria-level="3"> 
+  <h2>Links</h2>
+  <ul>
+    <img src="pics/dot.png" alt="dot">&nbsp;<a href="https://www.barnardhci.com"  role="link">Accessibility Research at Hamilton</a><br>
+    <img src="pics/dot.png" alt="dot">&nbsp;<a href="https://www.hamilton.edu/offices/dos/accessibility"  role="link">Disability Services at Hamilton</a><br>
+    <img src="pics/dot.png" alt="dot">&nbsp;<a href="https://xkcd.com/"  role="link">XKCD</a><br>
+    <img src="pics/dot.png" alt="dot">&nbsp;<a href="https://www.youtube.com/watch?v=HtTyRajRuyY"  role="link">A11ycasts Videos</a><br>
+    <video width="800" controls autoplay>
+      <source src="/mov1.mov" type="video/mp4">
+  </video>
+  </ul>
+</footer>
+
+<footer id="signup" role="form" aria-label="Sign up form" aria-level="3"> 
+  <h2>Sign Up!</h2>
+
+  <form role="sign-up-form">
+    <form role="name_first_middle_last">  
+      <label for="name">Name:</label>
+      <input name="fn" type="text" size="10" id="fn" aria-label="Type in first name" /> 
+      <input name="mi" type="text" size="1" id="mi" aria-label="Type in middle name" />. 
+      <input name="ln" type="text" size="10" id="ln"aria-label="Type in last name" / ><br>
+    </form>
+
+    <form role="email">
+      <label for="email">Email:</label>
+      <input id="em" name="em" type="text" size="20" aria-label="Type in email address">
+    </form>
+
+    <form role="spam query""> 
+      <label for="spamtext">Would you like to receive occasional emails with offers from us?</label>
+      <div id="receivespambutton">
+        <img src="pics/checked.png" alt="checkbox" width="40" height = "40" tabindex="0">
+      </div>
+      <input type="hidden" name="spamyn" id="spamyn" aria-valuenow="n" 
+      aria-label="Check to subscribe or uncheck to unsubscribe">
+    </form>
+
+    <form role="comments""> 
+      <label for="comments">Comments:</label><br>
+      <textarea id="comments" rows=10" cols="60"></textarea>
+      <input type="button" value="Sign Up!" id="signupbutton">
+    </form>
+  
+  </form>
+</footer>
+
+
+</body>
+</html>
